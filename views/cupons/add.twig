@@ -1,0 +1,45 @@
+{% extends "template.twig" %}
+
+{% block content %}
+
+  <form class="form" id="tipocontato" method="post" action="/cupons/pegardados">
+    <p>Preencha os dados com atenção.</p>
+
+    <input type="hidden" class="form-control" id="idtipocontato" name="idtipocontato">
+
+    <div class="form-group">
+      <label class="">Nome</label>
+      <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+    </div>
+    <div class="form-group">
+      <label class="">Sobrenome</label>
+      <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="sobrenome">
+    </div>
+    <div class="form-group">
+      <label class="">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Tipo de Contato">
+    </div>
+    <div class="form-group">
+      <label class="">Telefone</label>
+      <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Tipo de Contato">
+    </div>
+    {#<div class="hr-line-dashed"></div>#}
+    <div class="form-group">
+      <div class="">
+        {#<button class="btn btn-info" type="submit" id="enviar" name="enviar">Novo</button>#}
+        <button class="btn btn-primary" type="submit" id="salvar" name="salvar">Salvar</button>
+      </div>
+    </div>
+  </form>
+
+
+  <script>
+    $(document).ready(function() {
+
+      alert("oi");
+    });
+  </script>
+
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "template.twig" %}
+{% block title %}Silex | País | Editar{% endblock %}
+{% block content %}
+
+  <form class="form" method="post" action="/ApiRest/pais/edit">
+    <p>Preencha os dados com atenção.</p>
+
+    <input type="hidden" class="form-control" id="id" name="id" value="{{ id }}">
+
+    <div class="form-group">
+      <label class="">Pais</label>
+      <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descricao" value="{{ descricao }}">
+    </div>
+    <div class="form-group">
+      <label class="">Nascionalidade</label>
+      <input type="text" class="form-control" id="nascionalidade" name="nascionalidade" placeholder="Nascionalidade" value="{{ nacionalidade }}">
+    </div>
+
+    {#<div class="hr-line-dashed"></div>#}
+    <div class="form-group">
+      <div class="">
+        <button class="btn btn-primary" type="submit" id="salvar" name="salvar">Salvar</button>
+      </div>
+    </div>
+  </form>
+
+{% endblock %}

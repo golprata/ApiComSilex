@@ -1,0 +1,27 @@
+{% extends "template.twig" %}
+{% block title %}Silex | País | Listagem{% endblock %}
+{% block content %}
+    <table class="table table-bordered table-hover" id="paistable">
+        <thead>
+        <tr>
+            <th>#Id</th>
+            <th>País</th>
+            <th>Nascionalidade</th>
+            <th>Data Criação</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for p in paises %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.descricao }}</td>
+                <td>{{ p.nacionalidade }}</td>
+                <td>{{ p.datacadastro }}</td>
+                <td><a class="btn btn-sm btn-success" href="/pais/edit/{{ p.id }}">Editar</a> <a class="btn btn-sm btn-danger" href="ApiRest/pais/delete/{{ p.id }}">Deletar</a></td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
